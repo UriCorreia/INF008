@@ -1,0 +1,13 @@
+- JAVA é uma linguagem orientada a Objetos, ou seja, ela não gira em torno de funções e procedimentos e sim de objetos, definindo as caractrísticas e as ações que esse "Objeto" pode realizar
+
+Termos em POO:
+    -> Objeto: Uma instância de uma classe, em outras palavras trata-se do Objeto Real descrito numa classe;
+    -> Classe: Descrição de um grupo de Objetos;
+    -> Atributos: Características do classe;
+    -> Métodos: Ações/Comportamentos da classe;
+
+Exemplo: Uma "PLanta de uma casa" seria uma classe, enquanto a casa seria o "Objeto", enquanto as as caracteríticas como a quantidade de quartos e o tamanho do terreno são os "Atributos", por fim, temos os "Métodos" como o abrir/fechar as janelas, Aquecer a água e entre outras...
+
+Pilares de POO:
+    -> Herança: Capacidade de reutilizar a estrutura e os métodos de uma classe;
+    -> Polimorfismo: Capacidade de as variáveis terem mais de um tipo;
