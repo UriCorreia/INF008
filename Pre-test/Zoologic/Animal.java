@@ -10,7 +10,7 @@ public abstract class Animal{
 
     public abstract void emitSound();
 
-    public void sleep(String name){
-        System.out.println("\n" + name + "Is sleeping zzz...\n");
+    public void sleep(){
+        System.out.println(name + " Is sleeping zzz...\n");
     }
 }
