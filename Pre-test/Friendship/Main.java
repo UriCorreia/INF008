@@ -16,4 +16,3 @@ public class Main {
         u1.showFriends();
     }
 }
-```
