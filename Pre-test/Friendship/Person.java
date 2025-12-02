@@ -1,13 +1,16 @@
+import java.time.LocalDate;
+import java.time.Period;
+
 public abstract class Person{
 
     protected String userName;
     protected String email;
-    protected int countFriends;
+    protected LocalDate dateBirthday;
 
-    public Person(String userName, String email, int countFriends){
+    public Person(String userName, String email, String dateBirthday){
         this.userName = userName;
         this.email = email;
-        this.countFriends = countFriends;
+        this.dateBirthday = LocalDate.parse(dateBirthday);
     }
 
     // Getters
@@ -17,8 +20,9 @@ public abstract class Person{
     public String getEmail(){
         return this.email;
     }
-    public int getCountFriends(){
-        return this.countFriends;
+    public int getAge(){
+        LocalDate hoje = LocalDate.now();
+        return Period.between(this.dateBirthday, hoje).getYears();
     }
 
     // Setters
@@ -28,12 +32,15 @@ public abstract class Person{
     public void setEmail(String email){
         this.email = email;
     }
-    public void setCountFriends(int countFriends){
-        if(countFriends < 0){
-            System.out.println("Valor invélido!");
-            return;
-        } else{
-            this.countFriends = countFriends;
+
+    // Métodos
+    public void checkBirthday() {
+        LocalDate hoje = LocalDate.now();
+        if (this.dateBirthday.getDayOfMonth() == hoje.getDayOfMonth() &&
+            this.dateBirthday.getMonth() == hoje.getMonth()) {
+            System.out.println("🎉 PARABÉNS " + this.userName + "! Feliz Aniversário!");
+        } else {
+            System.out.println(this.userName + " não faz aniversário hoje.");
         }
     }
-}
+}   
